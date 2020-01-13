@@ -11,6 +11,7 @@ public class Textbox extends PageObject{
 	}
 
 	public void type(String content) throws InterruptedException {
+		this.getRuntimeElement().clear();
 		this.getRuntimeElement().sendKeys(content);
 	}
 	public void click() {

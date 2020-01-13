@@ -25,14 +25,14 @@ public class Constant {
 	public static final String ERROR_INVALID_PASSWORD = "Invalid username or password. Please try again.";
 	public static final String[] ARRAY_INVALID_PASSWORD = {"12345","123456","2345","32145","34354"};  
 	//Register
-	public static final String messageSucessRegister = "Thank you for registering your account";
-	public static final String messageFailsRegister = "There're errors in the form. Please correct the errors and try again.";
+	public static final String MESSAGE_REGISTER_SUCESS = "Thank you for registering your account";
+	public static final String ERROR_MESSAGE_REGISTER = "There're errors in the form. Please correct the errors and try again.";
 	//chang pass
 
-	public static final String newPassword = "a123:\"/{}!@$";
-	public static final String confirmPass = "b456:\"/{}!@$";
+	public static final String NEW_PASSWORD = "a123:\"/{}!@$";
+	public static final String CONFIRM_PASSWORD = "b456:\"/{}!@$";
 	
-	public static final String errorEmailInUse = "This email address is already in use.";
+	public static final String ERROR_EMAIL_IN_USE = "This email address is already in use.";
 	//pixel scroll page
 	public static final String scrollHeight = "1000";
 	public static final String scrollWidtht = "1000";

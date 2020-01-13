@@ -13,14 +13,9 @@ public class TestCase_10_Create_Acount_In_Use_Email extends TestHelper {
 	
 	@Test
 	public void TC_10_Create_Acount_In_Use_Email() throws InterruptedException {
-		if(homePage.doesLogoutExits())
-		{
-			homePage.clickTabMenuHomePage(Constant.TAB_LOGOUT);
-		}
 		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);
-		
-		register.registerAccount(Constant.USERNAME, Constant.newPassword, Constant.PID);
-		Assert.assertEquals(Constant.errorEmailInUse, register.getLblErrorMessage());
+		register.registerAccount(Constant.USERNAME, Constant.NEW_PASSWORD, Constant.NEW_PASSWORD, Constant.PID);
+		Assert.assertEquals(Constant.ERROR_EMAIL_IN_USE, register.getErrorMessage());
 	}
 
 }

@@ -17,8 +17,8 @@ public class TestCase_07_Create_New_Account extends TestHelper {
 	
 		//create random String to join into username
 		String usrNameRegister = Constant.USERNAME_REGISTER + randomNum();
-		register.registerAccount(usrNameRegister, Constant.USERNAME_REGISTER, Constant.PID);
-		Assert.assertEquals(Constant.messageSucessRegister, register.getLblMessageSucessRegister());		
+		register.registerAccount(usrNameRegister, Constant.PASSWOD_REGISTER,Constant.PASSWOD_REGISTER, Constant.PID);
+		Assert.assertEquals(Constant.MESSAGE_REGISTER_SUCESS, register.getMessageSucess());		
 	}
 
 }

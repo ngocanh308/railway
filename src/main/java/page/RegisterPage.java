@@ -1,67 +1,37 @@
 package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 
+import common.Button;
 import common.DriverUtils;
+import common.Message;
+import common.Textbox;
 
 public class RegisterPage {	
-	private final By email = By.id("email"); 
-	private final By pass = By.xpath("//input[@id='password']"); 
-	private final By confirmPass = By.xpath("//input[@id='confirmPassword']");
-	private final By pid = By.id("pid");
-	private final By btnRegister = By.xpath("//p[@class='form-actions']//input");
-	private final By messageSucessRegister = By.xpath("//h1[contains(text(),'Thank you for registering your account')]");
-	private final By errorMessage = By.xpath("//p[@class='message error']");
+	Textbox txtEmail = new Textbox(By.id("email"));
+	Textbox txtPass = new Textbox(By.xpath("//input[@id='password']"));
+	Textbox txtConfirmPass = new Textbox(By.xpath("//input[@id='confirmPassword']"));
+	Textbox textPid = new Textbox(By.id("pid"));
+	Button btnRegister = new Button(By.xpath("//p[@class='form-actions']//input"));
+	Message lblSucessRigister = new Message(By.xpath("//h1[contains(text(),'Thank you for registering your account')]"));
+	Message lblErrorMessage = new Message(By.xpath("//p[@class='message error']"));
 	
-	private WebElement getEmail(){
-		return DriverUtils.getDriver().findElement(email);
-	}	
-	
-	private WebElement getPass(){
-		return DriverUtils.getDriver().findElement(pass);
-	}
-	
-	private WebElement getConfirmPass(){
-		return DriverUtils.getDriver().findElement(confirmPass);
-	}
-	
-	private WebElement getPid(){
-		return DriverUtils.getDriver().findElement(pid);
-	}
-	
-	private WebElement getBtnRegister(){
-		return DriverUtils.getDriver().findElement(btnRegister);
-	}
-	
-	private WebElement getMessageSucessRegister(){
-		return DriverUtils.getDriver().findElement(messageSucessRegister);
-	}
-	
-	private WebElement getErrorMessage(){
-		return DriverUtils.getDriver().findElement(errorMessage);
-	}
-	
-	public String getLblMessageSucessRegister(){
-		return this.getMessageSucessRegister().getText();
-	}
-	
-	public String getLblErrorMessage(){
-		return this.getErrorMessage().getText();
-	}
-	
-	public void registerAccount(String email, String pass, String pid){
-		this.getEmail().clear();
-		this.getEmail().sendKeys(email);
-		this.getPass().clear();
-		this.getPass().sendKeys(pass);
-		this.getPass().clear();
-		this.getPass().sendKeys(pass);
+
+	public void registerAccount(String email, String pass, String confirmPass, String pid) throws InterruptedException{
+		txtEmail.type(email);
+		txtPass.type(pass);
+		txtConfirmPass.type(confirmPass);
 		JavascriptExecutor js = (JavascriptExecutor) DriverUtils.getDriver();
 		js.executeScript("window.scrollBy(0,1000)");
-		this.getConfirmPass().clear();
-		this.getConfirmPass().sendKeys(pass);
-		this.getPid().sendKeys(pid);
-		this.getBtnRegister().click();
+		textPid.type(pid);
+		btnRegister.click();
+	}
+	
+	public String getMessageSucess() {
+		return lblSucessRigister.getTextMessage();
+	}
+	
+	public String getErrorMessage() {
+		return lblErrorMessage.getTextMessage();
 	}
 }
