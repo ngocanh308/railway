@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18323" started-at="2020-01-13T14:17:19Z" finished-at="2020-01-13T14:17:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18323" started-at="2020-01-13T14:17:19Z" finished-at="2020-01-13T14:17:37Z">
+      <class name="com.raiway.TestCase_01_Login_Sucess">
+        <test-method status="PASS" signature="BeforeClass()[pri:0, instance:com.raiway.TestCase_01_Login_Sucess@4501b7af]" name="BeforeClass" is-config="true" duration-ms="13322" started-at="2020-01-13T21:17:19Z" finished-at="2020-01-13T21:17:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method status="PASS" signature="TC_01_Login_Sucess()[pri:0, instance:com.raiway.TestCase_01_Login_Sucess@4501b7af]" name="TC_01_Login_Sucess" duration-ms="4068" started-at="2020-01-13T21:17:32Z" finished-at="2020-01-13T21:17:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Login_Sucess -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.raiway.TestCase_01_Login_Sucess@4501b7af]" name="afterClass" is-config="true" duration-ms="916" started-at="2020-01-13T21:17:36Z" finished-at="2020-01-13T21:17:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.raiway.TestCase_01_Login_Sucess -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
