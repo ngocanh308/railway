@@ -19,7 +19,7 @@ public class TestCase_06_Redirected_After_Logout extends TestHelper {
 		homePage.clickTabMenuHomePage(Constant.TAB_CONTACT);
 		homePage.clickTabMenuHomePage(Constant.TAB_LOGOUT);
 		Assert.assertEquals(Constant.HOMEURL, DriverUtils.getDriver().getCurrentUrl());
-		homePage.doesLogoutExits();		
+		Assert.assertFalse(homePage.doesLogoutExits());		
 	}
 
 }
