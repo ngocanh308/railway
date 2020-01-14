@@ -12,9 +12,11 @@ public class TestCase_10_Create_Acount_In_Use_Email extends TestHelper {
 	RegisterPage register = new RegisterPage();
 	
 	@Test
-	public void TC_10_Create_Acount_In_Use_Email() throws InterruptedException {
+	public void TC_10_Create_Acount_In_Use_Email() throws InterruptedException {	
+		
 		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);
 		register.registerAccount(Constant.USERNAME, Constant.NEW_PASSWORD, Constant.NEW_PASSWORD, Constant.PID);
+		
 		Assert.assertEquals(Constant.ERROR_EMAIL_IN_USE, register.getErrorMessage());
 	}
 

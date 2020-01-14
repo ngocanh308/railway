@@ -13,11 +13,12 @@ public class TestCase_11_Create_Account_With_Blank_Pass_and_Pid extends TestHelp
 	
 	@Test
 	public void TC_11_Create_Account_With_Blank_Pass_and_Pid() throws InterruptedException {
-		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);
 		
+		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);		
 		//create random String to join into username
 		String userNameRegister = Constant.USERNAME_REGISTER + randomNum();
 		register.registerAccount(userNameRegister, "", "", "");
+		
 		Assert.assertEquals(Constant.ERROR_MESSAGE_REGISTER, register.getErrorMessage());		
 	}
 

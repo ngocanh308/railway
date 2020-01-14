@@ -14,6 +14,7 @@ public class TestCase_06_Redirected_After_Logout extends TestHelper {
 	
 	@Test
 	public void TC_06_Redirected_After_Logout() throws InterruptedException {
+		
 		homePage.clickTabMenuHomePage(Constant.TAB_LOGIN);
 		login.login(Constant.USERNAME, Constant.PASSWORD);
 		homePage.clickTabMenuHomePage(Constant.TAB_CONTACT);

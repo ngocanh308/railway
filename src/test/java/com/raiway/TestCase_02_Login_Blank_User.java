@@ -14,6 +14,7 @@ public class TestCase_02_Login_Blank_User extends TestHelper {
 	
 	@Test
 	public void TC_02_Login_Blank_User() throws InterruptedException{
+		
 		homePage.clickTabMenuHomePage(Constant.TAB_LOGIN);
 		login.loginScroll(Constant.USERNAME, "");
 		

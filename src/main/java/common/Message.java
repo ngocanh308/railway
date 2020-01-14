@@ -12,5 +12,4 @@ public class Message extends PageObject{
 		return this.getRuntimeElement().getText();
 		
 	}
-
 }

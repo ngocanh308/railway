@@ -2,18 +2,16 @@ package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import common.DriverUtils;
+import common.Form;
 
 public class BookTicketPage {
 
 	//locator
-	private final By formTicket = By.xpath("//span[contains(text(),'Book ticket')]");	
-	//element
-	protected WebElement getlblFormTicket(){
-		return DriverUtils.getDriver().findElement(formTicket);
-	}	
+	Form frTicket = new Form(By.xpath("//span[contains(text(),'Book ticket')]"));
+	
 	//Method
 	public boolean isFormTicketDisplay(){
-		return this.getlblFormTicket().isDisplayed();
+		return frTicket.isDisplay();
 	}
 	
 	

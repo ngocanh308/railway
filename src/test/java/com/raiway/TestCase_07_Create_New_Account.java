@@ -13,11 +13,12 @@ public class TestCase_07_Create_New_Account extends TestHelper {
 	
 	@Test
 	public void TC_07_Create_New_Account() throws InterruptedException {
-		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);
-	
+		
+		homePage.clickTabMenuHomePage(Constant.TAB_REGISTER);	
 		//create random String to join into username
 		String usrNameRegister = Constant.USERNAME_REGISTER + randomNum();
 		register.registerAccount(usrNameRegister, Constant.PASSWOD_REGISTER,Constant.PASSWOD_REGISTER, Constant.PID);
+		
 		Assert.assertEquals(Constant.MESSAGE_REGISTER_SUCESS, register.getMessageSucess());		
 	}
 

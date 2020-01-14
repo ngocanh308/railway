@@ -10,6 +10,7 @@ import common.Message;
 
 
 public class HomePage {
+	
 	private final String tabMenuHomePage = "//span[contains(text(),'%s')]";
 	Message lblWelcomeMessage = new Message(By.xpath("//h1[contains(text(),'Welcome to Safe Railway')]"));
 	
