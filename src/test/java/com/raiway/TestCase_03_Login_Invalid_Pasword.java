@@ -13,6 +13,7 @@ public class TestCase_03_Login_Invalid_Pasword extends TestHelper {
 	
 	@Test
 	public void TC_03_Login_Invalid_Pasword() throws InterruptedException {
+		
 		homePage.clickTabMenuHomePage(Constant.TAB_LOGIN);
 		login.login(Constant.USERNAME, Constant.ARRAY_INVALID_PASSWORD[1]);
 		
