@@ -10,7 +10,7 @@ public class Textbox extends PageObject{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void type(String content) throws InterruptedException {
+	public void type(String content){
 		this.getRuntimeElement().clear();
 		this.getRuntimeElement().sendKeys(content);
 	}

@@ -31,7 +31,8 @@ public class Constant {
 	//Change pass Page
 	public static final String NEW_PASSWORD = "a123:\"/{}!@$";
 	public static final String CONFIRM_PASSWORD = "b456:\"/{}!@$";
-	//BookTicket Page
+	//Forgot password
+	public static String URL_OUT_LOOK = "dnmail.logigear.com";
 	
 	
 	
